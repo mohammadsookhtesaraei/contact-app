@@ -1,0 +1,13 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  padding: 10px;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
