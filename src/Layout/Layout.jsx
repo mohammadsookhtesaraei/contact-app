@@ -7,9 +7,6 @@ const Layout = ({children}) => {
                 <h1>Contact App</h1>
             </header>
             {children}
-            <footer className={styles.footer}>
-                <p>Developed by me</p>
-            </footer>
         </div>
     );
 }
