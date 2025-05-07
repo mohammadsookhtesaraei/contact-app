@@ -2,6 +2,7 @@ import { useState } from "react";
 import { inputs } from "../constant/inputs";
 
 import { v4 as uuidv4 } from 'uuid';
+import ContactList from "./ContactList";
 
 const Contacts = () => {
     const [contact,setContact]=useState({
@@ -35,6 +36,11 @@ const Contacts = () => {
         email:"",
         phone:""
         });
+    };
+
+    const deleteHandler=(id)=>{
+        const newContacts=contacts.filter((item)=> item.id !== id);
+        setContacts(newContacts);
     }
 
 
@@ -50,6 +56,7 @@ const Contacts = () => {
             <div>
             {alert && <p>{alert}</p>}
             </div>
+            <ContactList contacts={contacts} deleteHandler={deleteHandler}/>
         </div>
     );
 }
